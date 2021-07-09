@@ -1,0 +1,39 @@
+a {
+  background-color: #212529;
+}
+
+a:hover {
+  background-color: #30363b;
+}
+
+a:focus {
+  background-color: #30363b;
+}
+
+a:focus > font {
+  color: #ffa600;
+}
+
+a:focus > fa-icon {
+  color: #ffa600;
+}
+
+a font {
+  color: whitesmoke;
+}
+
+a fa-icon {
+  color: whitesmoke;
+}
+
+.selected {
+  background-color: #30363b;
+}
+
+.selected font {
+  color: #ffa600;
+}
+
+.selected fa-icon {
+  color: #ffa600;
+}

@@ -1,0 +1,31 @@
+<div class="bg-dark border-right text-light" id="sidebar-wrapper">
+  <div class="sidebar-heading">
+    <a
+      class="
+        list-group-item list-group-item-action
+        bg-dark
+        text-light
+        side-bar-font-size
+      "
+      href="#"
+      >Over Loading</a
+    >
+  </div>
+  <div class="list-group list-group-flush">
+    <a
+      href="#"
+      class="list-group-item list-group-item-action side-bar-font-size"
+      *ngFor="let item of sideBarItem"
+      (click)="clickNavBar(item.id)"
+      [ngClass]="{ selected: selectedId === item.id }"
+      ><fa-icon
+        [style.margin-left.px]="item.marginHori"
+        [style.margin-right.px]="item.marginHori"
+        [icon]="item.icon"
+      ></fa-icon>
+      <font>
+        {{ item.name }}
+      </font>
+    </a>
+  </div>
+</div>

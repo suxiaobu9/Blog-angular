@@ -1,42 +1,11 @@
 <div class="d-flex" [ngClass]="{ toggled: closeSideBar }" id="wrapper">
-  <!-- Sidebar -->
-  <div class="bg-dark border-right text-light" id="sidebar-wrapper">
-    <div class="sidebar-heading">
-      <a
-        class="
-          list-group-item list-group-item-action
-          bg-dark
-          text-light
-          side-bar-font-size
-        "
-        href="#"
-        >Over Loading</a
-      >
-    </div>
-    <div class="list-group list-group-flush">
-      <a
-        href="#"
-        class="
-          list-group-item list-group-item-action
-          bg-dark
-          text-light
-          side-bar-font-size
-        "
-        *ngFor="let item of sideBarItem"
-        ><fa-icon
-          [style.margin-left.px]="item.marginHori"
-          [style.margin-right.px]="item.marginHori"
-          [icon]="item.icon"
-        ></fa-icon>
-        {{ item.name }}
-      </a>
-    </div>
-  </div>
-  <!-- /#sidebar-wrapper -->
-
+  <app-sidebar></app-sidebar>
   <!-- Page Content -->
   <div id="page-content-wrapper">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom"
+      style="padding-left: 10px"
+    >
       <button class="navbar-toggler" (click)="toggleSideBar()">
         <span class="navbar-toggler-icon"></span>
       </button>
