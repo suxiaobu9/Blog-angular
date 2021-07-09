@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { faRobot, faTorah, faPray } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,7 +8,22 @@ import { faRobot, faTorah, faPray } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent implements OnInit {
-  constructor() {}
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParams.subscribe((params) => {
+      const shortCutType = params['shortCutType'];
+      if (shortCutType) {
+        let selectedSideBar = this.sideBarItem.find((ele) => {
+          return (
+            ele.shortCutType.toLocaleLowerCase() ===
+            shortCutType.toLocaleLowerCase()
+          );
+        });
+
+        if (!selectedSideBar) return;
+        this.selectedId = selectedSideBar.id;
+      }
+    });
+  }
 
   ngOnInit(): void {}
 
@@ -17,23 +33,23 @@ export class SidebarComponent implements OnInit {
     {
       id: 1,
       name: '技術',
-      href: '#',
+      shortCutType: 'Technology',
       icon: faRobot,
-      marginHori: 10,
+      marginHori: 15,
     },
     {
       id: 2,
       name: '食譜',
-      href: '#',
+      shortCutType: 'Recipe',
       icon: faTorah,
-      marginHori: 10,
+      marginHori: 15,
     },
     {
       id: 3,
       name: '面試',
-      href: '#',
+      shortCutType: 'Interview',
       icon: faPray,
-      marginHori: 15,
+      marginHori: 22,
     },
   ];
 

@@ -1,19 +1,16 @@
 <div class="bg-dark border-right text-light" id="sidebar-wrapper">
   <div class="sidebar-heading">
     <a
-      class="
-        list-group-item list-group-item-action
-        bg-dark
-        text-light
-        side-bar-font-size
-      "
+      class="list-group-item list-group-item-action bg-dark text-light"
       href="#"
       >Over Loading</a
     >
   </div>
   <div class="list-group list-group-flush">
     <a
-      href="#"
+      [routerLink]="['']"
+      [queryParams]="{ shortCutType: item.shortCutType }"
+      routerLinkActive="router-link-active"
       class="list-group-item list-group-item-action side-bar-font-size"
       *ngFor="let item of sideBarItem"
       (click)="clickNavBar(item.id)"
