@@ -14,7 +14,6 @@ export class ArticleShortcutComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
       this.shortCutType = params['shortCutType'];
-      console.log(this.shortCutType);
     });
   }
 }
