@@ -1,17 +1,23 @@
 <div class="row" style="margin-top: 10px">
   <article
-    *ngFor="let item of test"
+    *ngFor="let item of shortcuts"
     class="text-dark col-md-6 offset-md-3"
     style="background-color: white; border-radius: 10px; margin-top: 10px"
   >
-    <div style="background-color: yellow; margin: 15px 15px 0px 15px">
-      <a class="text-dark" href="" style="font-size: 30px">header</a>
+    <div style="margin: 15px 15px 0px 15px">
+      <a class="text-dark" href="" style="font-size: 30px">{{ item.title }}</a>
     </div>
     <span
-      style="background-color: hotpink; margin-left: 15px; border-radius: 5px"
-      >123</span
+      style="
+        background-color: rgb(240, 240, 240);
+        margin-left: 15px;
+        border-radius: 5px;
+        padding: 0px 5px;
+        font-size: 15px;
+      "
+      >{{ item.date }}</span
     >
     <hr />
-    <div style="background-color: green; margin: 15px">shortcut</div>
+    <div style="background-color: green; margin: 15px">{{ item.memo }}</div>
   </article>
 </div>

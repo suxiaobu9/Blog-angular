@@ -1,3 +1,4 @@
+import { ArticleService } from './../article.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,14 +8,22 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./article-shortcut.component.css'],
 })
 export class ArticleShortcutComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private articleSvc: ArticleService
+  ) {}
 
-  shortCutType: string = '';
+  shortcutType: string = '';
+  shortcuts: any = [];
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
-      this.shortCutType = params['shortCutType'];
+      this.shortcutType = params['shortcutType'];
+      this.articleSvc
+        .getShortcutData(this.shortcutType ?? 'Technology')
+        .subscribe((result) => {
+          this.shortcuts = result;
+        });
     });
   }
-  test = ['', ''];
 }

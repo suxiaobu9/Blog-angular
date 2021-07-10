@@ -10,12 +10,12 @@ import { faRobot, faTorah, faPray } from '@fortawesome/free-solid-svg-icons';
 export class SidebarComponent implements OnInit {
   constructor(private route: ActivatedRoute) {
     this.route.queryParams.subscribe((params) => {
-      const shortCutType = params['shortCutType'];
-      if (shortCutType) {
+      const shortcutType = params['shortcutType'];
+      if (shortcutType) {
         let selectedSideBar = this.sideBarItem.find((ele) => {
           return (
             ele.shortCutType.toLocaleLowerCase() ===
-            shortCutType.toLocaleLowerCase()
+            shortcutType.toLocaleLowerCase()
           );
         });
 
