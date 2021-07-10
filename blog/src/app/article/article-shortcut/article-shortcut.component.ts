@@ -16,4 +16,5 @@ export class ArticleShortcutComponent implements OnInit {
       this.shortCutType = params['shortCutType'];
     });
   }
+  test = ['', ''];
 }

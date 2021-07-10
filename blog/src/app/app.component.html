@@ -1,17 +1,18 @@
-<div class="d-flex" [ngClass]="{ toggled: closeSideBar }" id="wrapper">
+<div
+  class="d-flex bg-dark text-light"
+  [ngClass]="{ toggled: closeSideBar }"
+  id="wrapper"
+>
   <app-sidebar></app-sidebar>
   <!-- Page Content -->
-  <div id="page-content-wrapper">
-    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom"
-      style="padding-left: 10px"
-    >
+  <div id="page-content-wrapper" (window:resize)="onResize($event)">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="padding-left: 10px">
       <button class="navbar-toggler" (click)="toggleSideBar()">
         <span class="navbar-toggler-icon"></span>
       </button>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid navbar-dark">
       <router-outlet></router-outlet>
       <!-- <h1 class="mt-4">Simple Sidebar</h1>
       <p>

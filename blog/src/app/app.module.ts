@@ -9,7 +9,13 @@ import { ArticleModule } from './article/article.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, SidebarModule, CommonModule, ArticleModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SidebarModule,
+    CommonModule,
+    ArticleModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

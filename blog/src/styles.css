@@ -47,3 +47,7 @@ body {
 .side-bar-font-size {
   font-size: 20px;
 }
+
+a:link {
+  text-decoration: none;
+}

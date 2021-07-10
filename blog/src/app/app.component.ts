@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,5 +12,9 @@ export class AppComponent {
 
   toggleSideBar() {
     this.closeSideBar = !this.closeSideBar;
+  }
+
+  onResize(event: any) {
+    if (document.body.clientWidth > 992) this.closeSideBar = false;
   }
 }
