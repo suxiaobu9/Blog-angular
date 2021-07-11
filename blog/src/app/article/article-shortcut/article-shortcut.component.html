@@ -1,11 +1,19 @@
 <div class="row" style="margin-top: 10px">
   <article
-    *ngFor="let item of shortcuts"
+    *ngFor="let item of shortcuts$ | async"
     class="text-dark col-md-6 offset-md-3"
     style="background-color: white; border-radius: 10px; margin-top: 10px"
   >
     <div style="margin: 15px 15px 0px 15px">
-      <a class="text-dark" href="" style="font-size: 30px">{{ item.title }}</a>
+      <a
+        [routerLink]="['detail']"
+        [queryParams]="{ shortcutType: shortcutType, id: item.id }"
+        routerLinkActive="router-link-active"
+        class="text-dark"
+        href=""
+        style="font-size: 30px"
+        >{{ item.title }}</a
+      >
     </div>
     <span
       style="

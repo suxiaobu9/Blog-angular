@@ -14,7 +14,7 @@ export class SidebarComponent implements OnInit {
       if (shortcutType) {
         let selectedSideBar = this.sideBarItem.find((ele) => {
           return (
-            ele.shortCutType.toLocaleLowerCase() ===
+            ele.shortcutType.toLocaleLowerCase() ===
             shortcutType.toLocaleLowerCase()
           );
         });
@@ -33,21 +33,21 @@ export class SidebarComponent implements OnInit {
     {
       id: 1,
       name: '技術',
-      shortCutType: 'Technology',
+      shortcutType: 'Technology',
       icon: faRobot,
       marginHori: 15,
     },
     {
       id: 2,
       name: '食譜',
-      shortCutType: 'Recipe',
+      shortcutType: 'Recipe',
       icon: faTorah,
       marginHori: 15,
     },
     {
       id: 3,
       name: '面試',
-      shortCutType: 'Interview',
+      shortcutType: 'Interview',
       icon: faPray,
       marginHori: 22,
     },
