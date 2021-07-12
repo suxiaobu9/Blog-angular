@@ -1,8 +1,8 @@
 <div class="row" style="margin-top: 10px">
   <article
     *ngFor="let item of shortcuts$ | async"
-    class="text-dark col-md-6 offset-md-3"
-    style="background-color: white; border-radius: 10px; margin-top: 10px"
+    class="text-dark col-md-6 offset-md-3 bg-light"
+    style="border-radius: 10px; margin-top: 10px"
   >
     <div style="margin: 15px 15px 0px 15px">
       <a
@@ -26,6 +26,10 @@
       >{{ item.date }}</span
     >
     <hr />
-    <div style="background-color: green; margin: 15px">{{ item.memo }}</div>
+    <div *ngIf="item.memo.length" style="margin: 15px">
+      <ul>
+        <li *ngFor="let memo of item.memo">{{ memo }}</li>
+      </ul>
+    </div>
   </article>
 </div>

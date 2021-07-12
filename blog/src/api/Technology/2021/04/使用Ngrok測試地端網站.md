@@ -1,8 +1,10 @@
-# 使用 Ngrok 測試地端網站
+# 環境
 
 - 先去裝好[Ngrok](https://ngrok.com/download)
 
 - 或是利用 `Chocolatey` 裝 [https://community.chocolatey.org/packages/ngrok](https://community.chocolatey.org/packages/ngrok)
+
+## 開始
 
 辦好 Ngrok 的帳號並且[取得 token](https://dashboard.ngrok.com/get-started/your-authtoken)
 ![token](https://user-images.githubusercontent.com/37999690/125182739-29fc0300-e243-11eb-92b3-9f346289a3d3.png)

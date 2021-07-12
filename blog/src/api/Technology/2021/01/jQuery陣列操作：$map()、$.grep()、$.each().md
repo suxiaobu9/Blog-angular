@@ -1,4 +1,4 @@
-### 先來點假資料
+# 先來點假資料
 
 ```js
 function PersonalInfo(name, age, height) {
