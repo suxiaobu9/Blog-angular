@@ -1,7 +1,7 @@
-import { Observable } from 'rxjs';
 import { ArticleService } from './../article.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-article-detail',
@@ -31,6 +31,7 @@ export class ArticleDetailComponent implements OnInit {
           this.detailData = shortcutDatas.find((ele) => {
             return ele.id === this.id;
           });
+          this.detailData.href = `${environment.apiBaseUrl}${this.detailData.href}`;
         });
     });
   }
