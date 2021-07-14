@@ -10,7 +10,7 @@ export class ArticleService {
 
   getShortcutData$(type: string) {
     return this.http.get(
-      `${environment.apiBaseUrl}api/${type}.json?v=${new Date().getTime()}`
+      `${environment.apiBaseUrl}api/${type}.json?t=${new Date().getTime()}`
     );
   }
 }
