@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { faRobot, faTorah, faPray } from '@fortawesome/free-solid-svg-icons';
+import {
+  faRobot,
+  faTorah,
+  faPray,
+  faEgg,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-sidebar',
@@ -50,6 +55,13 @@ export class SidebarComponent implements OnInit {
       shortcutType: 'Interview',
       icon: faPray,
       marginHori: 22,
+    },
+    {
+      id: 4,
+      name: '從無到有',
+      shortcutType: 'ZeroToOne',
+      icon: faEgg,
+      marginHori: 15,
     },
   ];
 
